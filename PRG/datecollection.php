@@ -1,3 +1,10 @@
+<?php
+session_start() ;
+$schoolname = $_SESSION['schoolname'];
+$line1 = $_SESSION['line1'];
+//echo $line1 ;
+
+?>
 <html>
 <head>
 <body>
@@ -14,13 +21,16 @@ include "../dbconn.php" ;
  ?>
  <table>
  
+ <tr>
+ <td align="center"   colspan="7" style ="background-color: white;font-size:22" >
+  <?php echo $schoolname?>
+ </td>
+  </tr>
   <tr>
  <td align="center"   colspan="7" style ="background-color: white;font-size:22" >
  Fees collection From  <?php echo $nstartdate?> to <?php echo $nenddate?>
  </td>
  </tr>
-
- 
 	 
  
 	<tr>

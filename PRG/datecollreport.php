@@ -1,3 +1,10 @@
+<?php
+session_start() ;
+$schoolname = $_SESSION['schoolname'];
+$line1 = $_SESSION['line1'];
+//echo $line1 ;
+
+?>
 <html>
 <head>
 <body>
@@ -48,6 +55,17 @@ Basic instantiation and usage
  <div id="canvas" >
  <table>
  <thead>
+ <tr>
+ <td align="center"   colspan="7" style ="background-color: white;font-size:22;bottom-border:0px solid black" >
+ <?php echo $schoolname?> 
+ </td>
+ </tr>
+ <tr style="marig-top=0px">
+  <td align="center"   colspan="7" style ="background-color: white;font-size:22" >
+ <?php echo $line1?> 
+ </td>
+ </tr>
+ </tr>
   <tr>
  <td align="center"   colspan="7" style ="background-color: white;font-size:22" >
  Fees collection From  <?php echo $nstartdate?> to <?php echo $nenddate?>

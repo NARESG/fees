@@ -48,6 +48,7 @@ a:hover {
 <?php
 $month=$_POST['month'];
 $year =$_POST['year'];
+$tclass = $_POST['tclass'];
 draw_calendar($month,$year);
 
  function draw_calendar($month,$year){
@@ -165,7 +166,7 @@ $tdate[]=$row['attenddate'];
 }
 $size = count($tdate);
 
- $sql = "SELECT * FROM  student";
+ $sql = "SELECT * FROM  student where class_name = '$tclass'";
 // on attendance.acno=student.acno";
 
 $result = mysqli_query($conn,$sql);

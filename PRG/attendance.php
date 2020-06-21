@@ -58,11 +58,13 @@ a:hover {
  function calend() {
    var month = document.getElementById("month").value ;
    var year = document.getElementById("year").value ;
+	var tclass= document.getElementById("tclass").value;
+	
 	//alert("hello");
 	 $.ajax({
 			url:"calendar1.php",
 			method:"post",
-			data :{year:year , month:month},
+			data :{year:year , month:month ,tclass:tclass},
 			success:function(data)
 			{
 				
@@ -171,12 +173,29 @@ document.getElementById('date').value = today;
 		include 'concession.php';
 		//include 'fetchfield.php' ;
       // $tclass1="" ;
-	   $mon="6" ;
-	   $year="2020" ;
+// function to get current year and month value
+$mon = date('m')  ;
+$year = date('Y');
+//	   $mon="6" ;
+//	   $year="2020" ;
 	   ?>
+	   <br>
+	   
 <input type="hidden" id="month" value=<?php echo $mon ?> />
 <input type="hidden" id="year" value=<?php echo $year ?> />
 <input type="hidden" id="date" name="date" />
+<select  name="tclass" id="tclass"  onclick="calend()" style="font-size:18px;height:35;width:250" required >
+
+	<option value="" disabled selected>Choose Class Name</option>
+ <?php
+	$co1=0 ;
+	while ($co1 <count($tclass)){
+	?>
+	<option value= "<?php echo $tclass1[$co1] ?>" >   <?php echo $tclass1[$co1] ?> </option>;
+	<?php $co1=$co1+1;
+	}
+?>
+</select>
 <a href='javascript: calend()' > Attendance </a>
 <a href='javascript: mon1()' class="previous">&laquo; Previous</a>
 <a href='javascript: mon()' class="next">Next &raquo;</a>
