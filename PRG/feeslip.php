@@ -84,7 +84,7 @@ $schoolname = $_SESSION['schoolname'];
   	margin-top: 325px;
 }
 </style>
-<script type="text/javascript"  src="/fees/jquery321.js"> 
+<script type="text/javascript"  src="../fees/jquery321.js"> 
 <script  type="text/javascript" > 
 str=0 ;
 $(document).ready(function(){
