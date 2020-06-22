@@ -413,7 +413,7 @@ function sel() {
 		//include   'top.php' ;
 		include 'menu.php';
 		//include 'grno.php'; 
-		include 'CLASS.php';
+		include 'class.php';
 		// include 'getuser1.php';
 		//include 'party.php';
 		include 'transport.php';
